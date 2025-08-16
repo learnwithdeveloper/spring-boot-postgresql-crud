@@ -1,9 +1,11 @@
 # 🚀 Spring Boot + PostgreSQL CRUD API (in Hindi)
 
 This repository contains the source code for a **Spring Boot CRUD REST API** with **PostgreSQL Database**.
-It is part of the **Learn With Developer** YouTube series on Java Backend Development in Hindi.
+It is part of the **[Learn With Developer](https://youtube.com/@LearnWithDeveloper01)** YouTube series on Java Backend Development in Hindi.
 
-🎥 Watch the full tutorial on YouTube: *\[Coming Soon]*
+## ▶ Watch the Tutorial
+
+📺 **YouTube Video:** [🚀 Spring Boot + PostgreSQL CRUD API (in Hindi)](https://youtu.be/gOmuKIJJkvM)
 
 ---
 
