@@ -1,5 +1,3 @@
----
-
 # 🚀 Spring Boot + PostgreSQL CRUD API (in Hindi)
 
 This repository contains the source code for a **Spring Boot CRUD REST API** with **PostgreSQL Database**.
@@ -125,8 +123,9 @@ Follow these steps:
 
 ## 📢 Next in the Series
 
-In the next tutorials, we will cover:
+In the upcoming tutorials, we will cover:
 
-* Spring Boot + MySQL CRUD
-* Docker & Docker Compose Setup
-* REST API Best Practices
+* 📑 **Pagination & Sorting** in Spring Boot REST APIs
+* 🔍 **Search functionality** for flexible queries
+* ✅ **Payload Validation** using `@Valid`, `@NotBlank`, etc.
+* 📌 REST API Best Practices
