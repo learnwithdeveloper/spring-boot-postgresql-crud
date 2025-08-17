@@ -1,14 +1,15 @@
 package com.postgres.crud.services;
 
 import com.postgres.crud.dao.UserRepository;
-import com.postgres.crud.models.CreateUserRequest;
-import com.postgres.crud.models.UpdateUserRequest;
-import com.postgres.crud.models.User;
+import com.postgres.crud.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -30,8 +31,21 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
+    public UserResponse getAllUsers(UserSearchRequest userSearchRequest) {
+        Sort sort = Sort.by(userSearchRequest.getSortKey());
+        if (userSearchRequest.getSortValue().equalsIgnoreCase("asc")) {
+            sort = sort.ascending();
+        } else {
+            sort = sort.descending();
+        }
+
+        Pageable pageable = PageRequest.of(userSearchRequest.getPage(), userSearchRequest.getSize(), sort);
+//        Page<User> userData = userRepository.findAll(pageable);
+        Page<User> userData = userRepository.searchUsersByNameAndEmail(
+                userSearchRequest.getName(),
+                userSearchRequest.getEmail(),
+                pageable);
+        return new UserResponse(userData.toList(), userData.getTotalElements());
     }
 
     public void updateUser(String id, UpdateUserRequest updateUserRequest) {

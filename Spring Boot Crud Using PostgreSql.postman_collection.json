@@ -41,7 +41,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users",
+					"raw": "http://localhost:8080/users?page=0&size=10&sortKey=name&sortValue=asc&name=it&email=das",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -49,6 +49,32 @@
 					"port": "8080",
 					"path": [
 						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortKey",
+							"value": "name"
+						},
+						{
+							"key": "sortValue",
+							"value": "asc"
+						},
+						{
+							"key": "name",
+							"value": "it"
+						},
+						{
+							"key": "email",
+							"value": "das"
+						}
 					]
 				}
 			},

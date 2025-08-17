@@ -1,8 +1,6 @@
 package com.postgres.crud.controller;
 
-import com.postgres.crud.models.CreateUserRequest;
-import com.postgres.crud.models.UpdateUserRequest;
-import com.postgres.crud.models.User;
+import com.postgres.crud.models.*;
 import com.postgres.crud.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,8 +22,8 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> getAllUsers() {
-        return ResponseEntity.ok().body(userService.getAllUsers());
+    public ResponseEntity<UserResponse> getAllUsers(UserSearchRequest userSearchRequest) {
+        return ResponseEntity.ok().body(userService.getAllUsers(userSearchRequest));
     }
 
     @PatchMapping("/{id}")

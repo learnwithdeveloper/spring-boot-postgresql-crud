@@ -1,12 +1,16 @@
 # 🚀 Spring Boot + PostgreSQL CRUD API (in Hindi)
 
 This repository contains the source code for a **Spring Boot CRUD REST API** with **PostgreSQL Database**.
-It is part of the **[Learn With Developer](https://youtube.com/@LearnWithDeveloper01)** YouTube series on Java Backend Development in Hindi.
+It is part of the **[Backend Verse](https://www.youtube.com/@BackendVerse)** YouTube series on Java Backend Development in Hindi.
+
+👉 Watch the full tutorial series here:  
+[YouTube Playlist](https://www.youtube.com/playlist?list=PLdUn31k8Q721HBdMQzyl403o-bUtd31Wb)
 
 ## ▶ Watch the Tutorial
 
-📺 **YouTube Video:** [🚀 Spring Boot + PostgreSQL CRUD API (in Hindi)](https://youtu.be/gOmuKIJJkvM)
-
+📺 **YouTube Videos:**
+- [🚀 Spring Boot + PostgreSQL CRUD API (in Hindi)](https://youtu.be/gOmuKIJJkvM)
+- [🔍 Pagination, Sorting & Search in Spring Boot | REST API in Hindi 🌿 (Step-by-Step)](https://youtu.be/B6NRHlmZvzc)
 ---
 
 ## 📌 Features
@@ -94,7 +98,13 @@ curl -X POST http://localhost:8080/users \
 curl -X GET http://localhost:8080/users
 ```
 
-### 3️⃣ Update User
+### 3️⃣ Get All Users (Searching, Sorting, Pagination) - API
+
+```bash
+curl --location 'http://localhost:8080/users?page=0&size=10&sortKey=name&sortValue=asc&name=it&email=das'
+```
+
+### 4️⃣ Update User
 
 ```bash
 curl -X PATCH http://localhost:8080/users/{userId} \
@@ -105,7 +115,7 @@ curl -X PATCH http://localhost:8080/users/{userId} \
    }'
 ```
 
-### 4️⃣ Delete User
+### 5️⃣ Delete User
 
 ```bash
 curl -X DELETE http://localhost:8080/users/{userId}
@@ -123,11 +133,15 @@ Follow these steps:
 3. Select the file → `Spring Boot Crud Using PostgreSql.postman_collection.json`.
 4. Done ✅ Now you can directly test APIs without writing cURL.
 
-## 📢 Next in the Series
-
-In the upcoming tutorials, we will cover:
-
+## 📚 What We've Covered So Far
+* 🌱 **Build Your First REST API** using Spring Boot
+* 🗄 **Spring Boot + PostgreSQL** CRUD Operations
 * 📑 **Pagination & Sorting** in Spring Boot REST APIs
-* 🔍 **Search functionality** for flexible queries
-* ✅ **Payload Validation** using `@Valid`, `@NotBlank`, etc.
-* 📌 REST API Best Practices
+* 🔍 **Search Functionality** for flexible queries
+
+---
+
+## 📌 Upcoming Tutorials
+* ✅ **Payload Validation** in Spring Boot
+* 📌 **Global Exception Handler**
+* ⚡ More advanced features (to be added in the series)  
